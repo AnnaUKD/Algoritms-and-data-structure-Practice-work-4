@@ -45,4 +45,26 @@ function funcForSumOfIntegersInNumber(n) {
     return (n % 10) + funcForSumOfIntegersInNumber(Math.floor(n / 10));
 }
 
-console.log(funcForSumOfIntegersInNumber(567))
+// console.log(funcForSumOfIntegersInNumber(567))
+
+// Завдання 5
+
+function funcForReversingNumber(n) {
+    if (n < 10) {
+        return n;
+    }
+    return (n % 10) * Math.pow(10, Math.floor(Math.log10(n))) + funcForReversingNumber(Math.floor(n / 10));
+}
+// console.log(funcForReversingNumber(12345))
+
+// Завдання 6
+function funcFowWritingNumbersOneByOne(n) {
+    if (n < 10) {
+        console.log(n);
+        return n;
+    }
+    console.log(n % 10);
+    return funcFowWritingNumbersOneByOne(Math.floor(n / 10));
+}
+
+console.log(funcFowWritingNumbersOneByOne(12345))
